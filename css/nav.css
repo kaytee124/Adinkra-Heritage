@@ -1,0 +1,104 @@
+/* Ensure card spacing */
+.row > .col-md-4 {
+  margin-bottom: 30px; /* Adjust the bottom margin between cards */
+}
+
+/* Navbar Styles */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 0;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  background-color: #fff;
+  border-bottom: 2px solid #e0e0e0;
+  margin: 0;
+  transition: all 0.1s ease;
+}
+
+/* Navbar Items */
+ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  color: #000;
+  display: grid;
+  place-content: center;
+  margin: 0;
+}
+
+.logo {
+  color: #000;
+  cursor: pointer;
+}
+
+.menu {
+  color: #000;
+  padding: 0.5rem;
+  position: relative;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: all 0.5s ease;
+  bottom: 0;
+  left: 0;
+}
+
+.menu:hover::before {
+  transform: scaleX(1);
+}
+
+/* Body padding to adjust for navbar */
+body {
+  padding-top: 80px; /* Adjust this value according to your navbar height */
+}
+
+/* Remove underline and change text color of the anchor tag */
+.a {
+  text-decoration: none; /* Remove underline */
+  color: black;
+}
+
+/* Card Image Centering */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-body img {
+  margin-bottom: 15px; /* Adjust spacing between image and text */
+}
+
+/* Ensure text is centered */
+.name {
+  text-align: center;
+  margin-top: 10px; /* Adds spacing between the image and the name */
+}
+
+/* Remove underline on the anchor tags in cards */
+.card-body a {
+  text-decoration: none; /* Remove underline */
+  color: black; /* Ensure color is consistent */
+}
